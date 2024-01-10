@@ -1,4 +1,4 @@
-# Lab Report 1
+# Lab Report 1 - Remote Access and FileSystems
 Developing skills in remote access and filesystem is vital for programmers and anybody else who uses computers in their day to day. Here I'll outline basic commands like cd, ls, and cat, and explain various use cases for all of them. 
 
 ---
@@ -19,6 +19,8 @@ In this case, given a path to a directory ('lecture1') as the argument, cd chang
 Finally, lets look at what happens when cd is run with a path to a file as the argument:
 ```
 [user@sahara ~/lecture1]$ cd Hello.java
-bash: cd:
+bash: cd: Hello.java: Not a directory
 [user@sahara ~/lecture1]$
 ```
+When the command was run, the working directory was the lecture1 directory and the user attempted to change the working directory to the Hello.java file. Here we see that from the first to the third line, the working directory was not changed because cd can only change the directory to another directory and not a file as the code here attempts to do. Running the code seems to cause an error seen in the middle line of code. This error is thrown because the user attemped to pass a file into the cd command when the cd command only functions when passed directories/files.
+
