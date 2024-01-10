@@ -30,4 +30,13 @@ Next, we can examine the ls (list) command when it is not given any arguments
 [user@sahara ~/lecture1]$ ls
 Hello.class Hello.java messages README
 ```
-The command was run in the working directory 'lecture1' and listed all files and folders in the lecture1 directory. Note that it did not open any folders in this directory, merely displaying their names and nothing inside of them. We get this output becuase having no arguments to ls means that it is run in its current directory, that being lecture1. Due to this, it prints the files and folder inside of the lecture1 direcotry.
+The command was run in the working directory 'lecture1' and listed all files and folders in the lecture1 directory. Note that it did not open any folders in this directory, merely displaying their names and nothing inside of them. We get this output becuase having no arguments to ls means that it is run in its current directory, that being lecture1. Due to this, it prints the names of the files and folder inside of the lecture1 direcotry.
+
+Now, what will happen when ls is run with a directory path as an argument?
+```
+[user@sahara ~/lecture1]$ ls messages/
+el-lt.txt en-us.txt es-mx.txt zh-cn.txt
+[user@sahara ~/lecture1]$
+```
+This command was run in the working directory 'lecture1' and listed all the files inside of the messages directory. This happened because ls was given another directory as an argument, leading it to list the files inside of that passed in directory. Note that while the code technically enters the messages directory and lists its files, the third line of code shows that the active directory remains lecture1. There is no error thrown by this code.
+
