@@ -27,5 +27,7 @@ When the command was run, the working directory was the lecture1 directory and t
 ---
 Next, we can examine the ls (list) command when it is not given any arguments
 ```
-
+[user@sahara ~/lecture1]$ ls
+Hello.class Hello.java messages README
 ```
+The command was run in the working directory 'lecture1' and listed all files and folders in the lecture1 directory. Note that it did not open any folders in this directory, merely displaying their names and nothing inside of them. We get this output becuase having no arguments to ls means that it is run in its current directory, that being lecture1. Due to this, it prints the files and folder inside of the lecture1 direcotry.
