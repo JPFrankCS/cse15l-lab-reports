@@ -40,3 +40,9 @@ el-lt.txt en-us.txt es-mx.txt zh-cn.txt
 ```
 This command was run in the working directory 'lecture1' and listed all the files inside of the messages directory. This happened because ls was given another directory as an argument, leading it to list the files inside of that passed in directory. Note that while the code technically enters the messages directory and lists its files, the third line of code shows that the active directory remains lecture1. There is no error thrown by this code.
 
+Next, lets look at the ls command when it has a file path as its argument
+```
+[user@sahara ~/lecture1]$ ls Hello.java
+Hello.java
+```
+This command is run in the working directory 'lecture1' and output the name of the file that was passed into it. This happened because ls was passed a single file so the only file name it could output is the very file it was passed. It wasn't passed a folder, so it wouldn't be able to list the contents of that folder. There is no error in the code.
