@@ -24,3 +24,8 @@ bash: cd: Hello.java: Not a directory
 ```
 When the command was run, the working directory was the lecture1 directory and the user attempted to change the working directory to the Hello.java file. Here we see that from the first to the third line, the working directory was not changed because cd can only change the directory to another directory and not a file as the code here attempts to do. Running the code seems to cause an error seen in the middle line of code. This error is thrown because the user attemped to pass a file into the cd command when the cd command only functions when passed directories/files.
 
+---
+Next, we can examine the ls (list) command when it is not given any arguments
+```
+
+```
