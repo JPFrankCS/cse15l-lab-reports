@@ -46,3 +46,9 @@ Next, lets look at the ls command when it has a file path as its argument
 Hello.java
 ```
 This command is run in the working directory 'lecture1' and output the name of the file that was passed into it. This happened because ls was passed a single file so the only file name it could output is the very file it was passed. It wasn't passed a folder, so it wouldn't be able to list the contents of that folder. There is no error in the code.
+
+---
+Finally, what does the cat (concatonate) command do when run with no arguments?
+```
+
+```
