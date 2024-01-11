@@ -59,4 +59,7 @@ What happens when cat has a directory path as an argument?
 
 ```
 
-Finally, if the cat command has a file path as an argument, 
+Finally, what if the cat command has a file path as an argument?
+```
+
+```
