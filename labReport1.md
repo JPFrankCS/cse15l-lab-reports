@@ -59,14 +59,20 @@ This command is run in the working directory 'lecture1' and output the name of t
 ---
 Finally, what does the cat (concatonate) command do when run with no arguments?
 ```
-
+[user@sahara ~/lecture1]$ cat
+a
+a
+test
+test
 ```
-
+This command is run in the lecture1 directory and has no immediate effect except for the dissapearance of the prompt (user@sahara...). However, whenever any text is entered to the terminal, that same text is printed on the next line. This is because cat is not given any folders or files to print, so it asks the user what it should print and goes on to print that to the terminal. This will go on until the user enters control-c. This does not cause any errors to be thrown.
 
 What happens when cat has a directory path as an argument?
 ```
-
+[user@sahara ~/lecture1]$ cat messages/
+cat: messages/: Is a directory
 ```
+This command, run in the lecture1 directory prints the message seen here. While the cat command expects a file to be passed as argument, it recognizes that messages/ is a directory and informs the user of that fact. This is not an error, rather it is a print statement by the cat command.
 
 Finally, what if the cat command has a file path as an argument?
 ```
