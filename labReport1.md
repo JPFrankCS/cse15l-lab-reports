@@ -1,26 +1,35 @@
 # Lab Report 1 - Remote Access and FileSystems
-Developing skills in remote access and filesystem is vital for programmers and anybody else who uses computers in their day to day. Here I'll outline basic commands like cd, ls, and cat, and explain various use cases for all of them. 
+Developing skills in remote access and filesystem is vital for programmers and anybody else who uses computers in their day to day. Here I'll outline basic commands like cd, ls, and cat, and explain various use cases for all of them. Throughout, the command, pwd (print working directory) is used to display the directory the program is in at certain points in the code.
 
 ---
 Lets start with cd (change directory) when it has no arguments/paths:
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cd 
-[user@sahara ~]$
+[user@sahara ~]$ pwd
+/home
 ```
 As we can see here, when the command was run, the programmer was in their home directory and as we can see, there was no change in the working directory after running the cd command. We get this output, or rather this lack of output becuase we are telling the computer to change the working directory but not specifying what to change that directory to, leading the system to stay in its origional directory. While this is not the goal most programmers have when using cd, it is also not an error as no error messages are thrown.   
 
 Lets now examine what happens when running cd with a path to a directory as its argument:
 ```
+[user@sahara ~]$ pwd
+/home
 [user@sahara ~]$ cd lecture1/
-[user@sahara ~/lecture1]$
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 ```
 In this case, given a path to a directory ('lecture1') as the argument, cd changes the working directory to the directory given as the argument (in this case, 'lecture1'). When the command was run, the working directory was the home directory and after running the command, the directory is the argument passed in. This works because the 'lecture1' directory was inside of the home directory, so when the programmer used the cd command, the computer could successfully locate and switch to the directory entered in the argument. This is the intended function of cd and does not cause any errors.   
 
 Finally, lets look at what happens when cd is run with a path to a file as the argument:
 ```
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 [user@sahara ~/lecture1]$ cd Hello.java
 bash: cd: Hello.java: Not a directory
-[user@sahara ~/lecture1]$
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
 ```
 When the command was run, the working directory was the lecture1 directory and the user attempted to change the working directory to the Hello.java file. Here we see that from the first to the third line, the working directory was not changed because cd can only change the directory to another directory and not a file as the code here attempts to do. Running the code seems to cause an error seen in the middle line of code. This error is thrown because the user attemped to pass a file into the cd command when the cd command only functions when passed directories/files.
 
