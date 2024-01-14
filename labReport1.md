@@ -76,5 +76,16 @@ This command, run in the lecture1 directory prints the message seen here. While 
 
 Finally, what if the cat command has a file path as an argument?
 ```
+[user@sahara ~/lecture1]$ cat Hello.java
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+public class Hello {
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
+    System.out.println(content);
+  }
 ```
+This command is run in the lecture1 directory and prints the contents of the file passed in as argument. This is the function of the cat command as it prints the contents of its arguments. If two files were passed as arguments it would print both. Notice that despite this being a java file and not a text file, cat prints it as if it is a plaintext file. There are no errors thrown with this use of cat.
