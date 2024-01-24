@@ -13,16 +13,9 @@ class Handler implements URLHandler {
         }
         else if (url.getPath().equals("/add-message")){
             String[] params = url.getQuery().split("&");
-            if (params[0].split("=")[0] != "s"){
-                return "ERROR - INCORRECT URL FORMAT";
-            }
             String message = (params[0].split("="))[1];
-            if (params[1].split("=")[0] != "user"){
-                return "ERROR - INCORRECT URL FORMAT";
-            }
             String name = (params[1].split("="))[1];
             database.add(name + ": " + message);
-
         }
         String result = "";
         for (int i = 0; i<database.size();i++){
