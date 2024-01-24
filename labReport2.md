@@ -37,3 +37,7 @@ class ChatServer {
     }
 }
 ```
+Now Heres the output:
+![String Server Screenshot 1](StringServerScreenshot1.png)
+Lets See What Happens When we add another message!
+![String Server Screenshot 2](StringServerScreenshot2.png)
