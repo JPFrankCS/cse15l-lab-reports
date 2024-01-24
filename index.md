@@ -17,17 +17,3 @@ If you like what you see, please feel free to give me a job! That would be aweso
 > ![Image](http://getwallpapers.com/wallpaper/full/f/b/7/358289.jpg)
 > Look at ME!!!!!
 ---
-## heading2 text yay 
-* Wow
-* What
-* A
-* Cool
-* List
-```
-int num = (int) Math.random() * 10;
-if (num == 7){
-  System.crash(Windows.exe);
-}
-System.out.println("Congrats!");
-```
----
