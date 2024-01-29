@@ -47,17 +47,17 @@ Now, what will happen when `ls` is run with a directory path as an argument?
 el-lt.txt en-us.txt es-mx.txt zh-cn.txt
 [user@sahara ~/lecture1]$
 ```
-This command was run in the working directory 'lecture1' and listed all the files inside of the messages directory. This happened because ls was given another directory as an argument, leading it to list the files inside of that passed in directory. Note that while the code technically enters the messages directory and lists its files, the third line of code shows that the active directory remains lecture1. There is no error thrown by this code.
+This command was run in the working directory `/home/lecture1` and listed all the files inside of the  `/home/lecture1/messages` directory. This happened because `ls` was given another directory as an argument, leading it to list the files inside of that passed in directory. Note that while the code technically enters the `/home/lectures/messages` directory and lists its files, the third line of code shows that the active directory remains `/home/lecture1`. There is no error thrown by this code.
 
-Next, lets look at the ls command when it has a file path as its argument
+Next, lets look at the `ls` command when it has a file path as its argument
 ```
 [user@sahara ~/lecture1]$ ls Hello.java
 Hello.java
 ```
-This command is run in the working directory 'lecture1' and output the name of the file that was passed into it. This happened because ls was passed a single file so the only file name it could output is the very file it was passed. It wasn't passed a folder, so it wouldn't be able to list the contents of that folder. There is no error in the code.
+This command is run in the working directory `/home/lecture1` and output the name of the file that was passed into it. This happened because `ls` was passed a single file so the only file name it could output is the very file it was passed. It wasn't passed a folder, so it wouldn't be able to list the contents of that folder. There is no error in the code.
 
 ---
-Finally, what does the cat (concatonate) command do when run with no arguments?
+Finally, what does the `cat` (concatonate) command do when run with no arguments?
 ```
 [user@sahara ~/lecture1]$ cat
 a
@@ -65,16 +65,16 @@ a
 test
 test
 ```
-This command is run in the lecture1 directory and has no immediate effect except for the dissapearance of the prompt (user@sahara...). However, whenever any text is entered to the terminal, that same text is printed on the next line. This is because cat is not given any folders or files to print, so it asks the user what it should print and goes on to print that to the terminal. This will go on until the user enters control-c. This does not cause any errors to be thrown.
+This command is run in the `/home/lecture1` directory and has no immediate effect except for the dissapearance of the prompt (`user@sahara ~/lecture1`). However, whenever any text is entered to the terminal, that same text is printed on the next line. This is because `cat` is not given any folders or files to print, so it asks the user what it should print and goes on to print that to the terminal. This will go on until the user uses the keyboard shortcut `ctrl-C`. This does not cause any errors to be thrown.
 
-What happens when cat has a directory path as an argument?
+What happens when `cat` has a directory path as an argument?
 ```
 [user@sahara ~/lecture1]$ cat messages/
 cat: messages/: Is a directory
 ```
-This command, run in the lecture1 directory prints the message seen here. While the cat command expects a file to be passed as argument, it recognizes that messages/ is a directory and informs the user of that fact. This causes the error seen in the code above to be thrown. This error is thrown becuase the cat command is supposed to print the text contents of a file, so when it is passed a directory, it is unable to print the text as it is given no file.
+This command, run in the `/home/lecture1` directory prints the message seen here. While the `cat` command expects a file to be passed as argument, it recognizes that `/home/lecture1/messages` is a directory and informs the user of that fact. This causes the error seen in the code above to be thrown. This error is thrown becuase the `cat` command is supposed to print the text contents of a file, so when it is passed a directory, it is unable to print the text as it is given no file.
 
-Finally, what if the cat command has a file path as an argument?
+Finally, what if the `cat` command has a file path as an argument?
 ```
 [user@sahara ~/lecture1]$ cat Hello.java
 import java.io.IOException;
@@ -88,4 +88,4 @@ public class Hello {
     System.out.println(content);
   }
 ```
-This command is run in the lecture1 directory and prints the contents of the file passed in as argument. This is the function of the cat command as it prints the contents of its arguments. If two files were passed as arguments it would print both. Notice that despite this being a java file and not a text file, cat prints it as if it is a plaintext file. There are no errors thrown with this use of cat.
+This command is run in the `/home/lecture1` directory and prints the contents of the file passed in as argument. This is the function of the `cat` command as it prints the contents of its arguments. If two files were passed as arguments it would print both. Notice that despite this being a java file and not a text file, `cat` prints it as if it is a plaintext file. There are no errors thrown with this use of `cat`.
