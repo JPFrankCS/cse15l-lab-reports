@@ -10,7 +10,7 @@ Lets start with cd (change directory) when it has no arguments/paths:
 [user@sahara ~]$ pwd
 /home
 ```
-As we can see here, when the command was run, the programmer was in the home/lecture1 directory and this led to the working directory being changed to the home directory. We get this change becuase we are telling the computer to change the working directory but not specifying what to change that directory to, leading the system to move to its origional directory. This has no output, but as evidenced by the 'pwd' outputs, successfully changes the working directory to the home directory. If this command is run in the home directory, the system will simply stay in the home directory.This is not an error.
+As we can see here, when the command was run, the programmer was in the home/lecture1 directory and this led to the working directory being changed to the home directory. We get this change becuase we are telling the computer to change the working directory but not specifying what to change that directory to, leading the system to move to its origional directory. This has no output, but as evidenced by the `pwd` outputs, successfully changes the working directory to the home directory. If this command is run in the home directory, the system will simply stay in the home directory.This is not an error.
 
 Lets now examine what happens when running cd with a path to a directory as its argument:
 ```
