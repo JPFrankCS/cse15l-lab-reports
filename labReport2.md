@@ -41,12 +41,11 @@ Now, lets look at the output for a couple different situations and break down th
 
 ---
 ![String Server Screenshot 1](StringServerScreenshot1.png)
-In this screenshot, I use the `/add-message` functionality of the server by changing the page's url path. I add the message `Whats+Good+Yall!` from user    `wwwItsMe`. The `main` method is called in the `chatServer` class and the `handleRequest` method is called in the `handler` class. There are also a variety of methods called in the `Server.java` file, but those are beyond the scope of this article and simply supportive methods to help get the server running. `HandleRequest` takes a `URI` object as input, representing the url of the webpage. Thus, when the url is changed, that change is passed into and affects th `handleRequest` method. 
+In this screenshot, I use the `/add-message` functionality of the server by changing the page's url path. I add the message `Whats+Good+Yall!` from user    `wwwItsMe`. The `main` method is called in the `chatServer` class and the `handleRequest` method is called in the `handler` class. There are also a variety of methods called in the `Server.java` file, but those are beyond the scope of this article and simply supportive methods to help get the server running. `HandleRequest` takes a `URI` object as input, representing the url of the webpage. Thus, when the url is changed, that change is passed into and affects the `handleRequest` method. The `main` method takes an array of arguments, the first of which represents the server port, parsed and saved in `int port` `ArrayList<String> database` is an ArrayList of Strings that saves all messages in the chat server so that they can be printed.
+
 Which methods in your code are called?
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-
----
+How do the values of any relevant fields of the class change from this specific request? If no values got changeh
 ![String Server Screenshot 2](StringServerScreenshot2.png)
 Which methods in your code are called?
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
