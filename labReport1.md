@@ -4,13 +4,13 @@ Developing skills in remote access and filesystem is vital for programmers and a
 ---
 Lets start with cd (change directory) when it has no arguments/paths:
 ```
-[user@sahara ~]$ pwd
-/home
-[user@sahara ~]$ cd 
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+[user@sahara ~/lecture1]$ cd 
 [user@sahara ~]$ pwd
 /home
 ```
-As we can see here, when the command was run, the programmer was in their home directory and as we can see, there was no change in the working directory after running the cd command. We get this output, or rather this lack of output becuase we are telling the computer to change the working directory but not specifying what to change that directory to, leading the system to stay in its origional directory. While this is not the goal most programmers have when using cd, it is also not an error as no error messages are thrown.   
+As we can see here, when the command was run, the programmer was in the home/lecture1 directory and this led to the working directory being changed to the home directory. We get this change becuase we are telling the computer to change the working directory but not specifying what to change that directory to, leading the system to move to its origional directory. This has no output, but as evidenced by the 'pwd' outputs, successfully changes the working directory to the home directory. If this command is run in the home directory, the system will simply stay in the home directory.This is not an error.
 
 Lets now examine what happens when running cd with a path to a directory as its argument:
 ```
@@ -39,7 +39,7 @@ Next, we can examine the ls (list) command when it is not given any arguments
 [user@sahara ~/lecture1]$ ls
 Hello.class Hello.java messages README
 ```
-The command was run in the working directory 'lecture1' and listed all files and folders in the lecture1 directory. Note that it did not open any folders in this directory, merely displaying their names and nothing inside of them. We get this output becuase having no arguments to ls means that it is run in its current directory, that being lecture1. Due to this, it prints the names of the files and folder inside of the lecture1 direcotry.
+The command was run in the working directory 'lecture1' and listed all files and folders in the lecture1 directory. Note that it did not open any folders in this directory, merely displaying their names and nothing inside of them. We get this output becuase having no arguments to ls means that it is run in its current directory, that being lecture1. Due to this, it prints the names of the files and folder inside of the lecture1 direcotry. This is not an error.
 
 Now, what will happen when ls is run with a directory path as an argument?
 ```
@@ -72,7 +72,7 @@ What happens when cat has a directory path as an argument?
 [user@sahara ~/lecture1]$ cat messages/
 cat: messages/: Is a directory
 ```
-This command, run in the lecture1 directory prints the message seen here. While the cat command expects a file to be passed as argument, it recognizes that messages/ is a directory and informs the user of that fact. This is not an error, rather it is a print statement by the cat command.
+This command, run in the lecture1 directory prints the message seen here. While the cat command expects a file to be passed as argument, it recognizes that messages/ is a directory and informs the user of that fact. This causes the error seen in the code above to be thrown. This error is thrown becuase the cat command is supposed to print the text contents of a file, so when it is passed a directory, it is unable to print the text as it is given no file.
 
 Finally, what if the cat command has a file path as an argument?
 ```
