@@ -1,4 +1,4 @@
-Today's post will be covering servers and `ssh` keys. Lets start by looking at an interesting Server I coded.
+Today's post will be covering servers and `ssh` keys. Lets start by looking at an interesting server I coded.
 ```
 import java.io.IOException;
 import java.net.URI;
