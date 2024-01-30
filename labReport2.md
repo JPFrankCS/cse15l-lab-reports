@@ -53,7 +53,7 @@ In the image below, we see the absolute path to my private `SSH` key for logging
 
 ![private key path](privateSSHPath.png)
 
-On the other hand, the image below reveals the absolute path to the *public* `ssh` key saved in my `ieng6` account. due to this, the absolute path pictured is on the `ieng6` file system.
+On the other hand, the image below reveals the absolute path to the *public* `ssh` key saved in my `ieng6` account. Due to this, the absolute path pictured is on the `ieng6` file system.
 
 ![public key path](publicSshPath.png)
 
