@@ -51,8 +51,11 @@ In this screenshot, I use the `/add-message` functionality of the server by chan
 Using the command line, show with ls and take screenshots of:
 
 The absolute path to the private key for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
+![private key path]("privateSSHPath.png)
 The absolute path to the public key for your SSH key for logging into ieng6 (this is the one you copied to your account on ieng6, so it should be a path on ieng6's file system)
+![public key path]("publicSshPath.png)
 A terminal interaction where you log into your ieng6 account without being asked for a password.
+![Login without Password prompt](NoPasswordLogin.png)
 
 ---
 Ultimately, I learned a ton in the week two and three labs, but one thing I learned that I thought was super cool is how to code and run servers. It's so interesting how they can be run on different computers and retain data between them. It also really helped give me context for all the talk in the tech industry about servers. I also find the `getPath()` command and its uses very interesting and enjoyed learning how to code things like the chatServer and the simple search engine using it.
