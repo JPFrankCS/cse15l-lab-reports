@@ -6,7 +6,7 @@
 ---
 1. [Lab Report - Remote Access & File System](https://jpfrankcs.github.io/cse15l-lab-reports/labReport1.html)
 2. [Lab Report - Servers and SSH Keys](https://jpfrankcs.github.io/cse15l-lab-reports/labReport2.html)
-3. [TBD]
+3. [Lab Report - Bugs and Commands](https://jpfrankcs.github.io/cse15l-lab-reports/labReport3.html)
 4. [TBD]
 5. [TBD]
 
