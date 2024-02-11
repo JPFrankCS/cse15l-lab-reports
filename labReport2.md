@@ -49,7 +49,7 @@ In this screenshot, I use the `/add-message` functionality of the server by chan
 
 ---
 Next, lets take a look at `ssh` keys and logins!        
-In the image below, we see the absolute path to my private `SSH` key for logging into `ieng6` on my computer.
+In the image below, we see the absolute path to my private `SSH` key for logging into `ieng6` on my computer. Specifically, we are looking at the `id_rsa` file found at the absolute path `C:\Users\Jerem\.ssh\id_rsa`.
 
 ![private key path](privateSSHPath.png)
 
