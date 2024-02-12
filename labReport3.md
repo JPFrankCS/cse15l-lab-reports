@@ -63,9 +63,12 @@ Now, lets switch gears and discuss some bash commands. Particularly we'll focus 
 ```
 Note that the `| head` command simply shortens the output to a readable level and is beyond the scope of this discussion of the `find` command. Here, the command depicted searches the current directory and prints relative paths to all files. This is due to the `-type f` telling the program to look for files as opposed to directories. This may be useful if the programmer wants to count or work with all the files in their file structure without working with any directories.
 ```
-code
+[user@sahara ~/docsearch/technical]$ find . -type d 
+.
+./biomed
+./911report
 ```
-Explaination
+Here we see the `-type` command can be used with the `d` argument to get a list of relative paths to all directories in the given directory. This could be useful in any situation where the programmer wants a list of all directories. For example, they may want to add a certain file to each directory in a file structure, and could use this command to find each directory in that file structure so that those new files could be added.
 
 ---
 Way 2 - information from ___:
