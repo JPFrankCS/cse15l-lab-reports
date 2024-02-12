@@ -21,7 +21,7 @@ public void testReverseInPlace() {
 }
 ```
 Now lets look at the result of running these tests:
-[image]
+[image](FailedTestOutput.png)
 This failure is called a symptom. Now that we know the symptom and the input that leads to it, lets take a look at the code:  
   Before:
   ```
