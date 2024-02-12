@@ -1,10 +1,15 @@
 ### Bugs and Commands 
 
 ---
-Today, lets start by looking at bugs and testing.   
-Here is a failure inducing input for a program:
+Today, lets start by looking at bugs and testing. We'll be looking at a method called `reverseInPlace` that takes an `int[] arr` as argument and is meant to reverse the input array.  
+Here is a failure inducing input for the program:
 ```
-assertEquals("hey", 1,5);
+@Test
+public void testReverseInPlace() {
+    int[] input1 = { 5, 6, 7, 8 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 8, 7, 6, 5 },input1);
+}
 ```
 Despite this, there are still inputs that don't cause a failure such as:
 ```
