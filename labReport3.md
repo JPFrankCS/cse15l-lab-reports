@@ -112,7 +112,7 @@ Here we see the command returns the relative paths of all empty files and direct
 ./biomed/1476-9433-1-2.txt
 ./biomed/bcr294.txt
 ```
-explaination
+Here we see how the same command can be used to seach a specific directory other than the current working directory and return a list of the relative paths to empty files. This would be very useful if a programmer wanted to do any operation on all empty files, such as putting certain text in them or removing them.
 
 ---
 Way 4 - information from ___:
