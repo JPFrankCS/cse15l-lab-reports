@@ -25,11 +25,21 @@ Now lets look at the result of running these tests:
 This failure is called a symptom. Now that we know the symptom and the input that leads to it, lets take a look at the code:  
   Before:
   ```
-  code
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
   ```
   After:
   ```
-  code
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i ++) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i -1] = temp;
+    }
+  }
   ```
 <Explaination of Why this fixes the bug]
 
