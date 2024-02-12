@@ -84,15 +84,35 @@ Here we see the command returning the relative path to the file name given as ar
 Here we see that despite the fact that the command is not case sensitive, it can still return the expected result when the argument is in lowercase. This would be useful as a default command if a programmer is simply trying to locate a file. While they could use the `-name` command, and should if they know that the file name is lowercase, using the `-iname` command allows them to find the file regardless of capitalization.
 
 ---
-Way 3 - information from ___:
+`-empty
 ```
-code
+[user@sahara ~/docsearch/technical]$ find . -empty | head
+./biomed/bcr303.txt
+./biomed/1476-4598-2-2.txt
+./biomed/1477-7827-1-23.txt
+./biomed/ar79.txt
+./biomed/1476-4598-1-5.txt
+./biomed/bcr317.txt
+./biomed/1477-7827-1-36.txt
+./biomed/1477-7525-1-12.txt
+./biomed/1476-9433-1-2.txt
+./biomed/bcr294.txt
 ```
-Explaination
+Here we see the command returns the relative paths of all empty files and directories whithin directory. This could be useful for a data analyst who wants to confirm there are no empty files in a file structure so they can delete or otherwise handle them.
 ```
-code
+[user@sahara ~/docsearch/technical]$ find ./biomed/ -empty | head
+./biomed/bcr303.txt
+./biomed/1476-4598-2-2.txt
+./biomed/1477-7827-1-23.txt
+./biomed/ar79.txt
+./biomed/1476-4598-1-5.txt
+./biomed/bcr317.txt
+./biomed/1477-7827-1-36.txt
+./biomed/1477-7525-1-12.txt
+./biomed/1476-9433-1-2.txt
+./biomed/bcr294.txt
 ```
-Explaination
+explaination
 
 ---
 Way 4 - information from ___:
