@@ -71,15 +71,17 @@ Note that the `| head` command simply shortens the output to a readable level an
 Here we see the `-type` command can be used with the `d` argument to get a list of relative paths to all directories in the given directory. This could be useful in any situation where the programmer wants a list of all directories. For example, they may want to add a certain file to each directory in a file structure, and could use this command to find each directory in that file structure so that those new files could be added.
 
 ---
-Way 2 - information from ___:
+`-iname` 
 ```
-code
+[user@sahara ~/docsearch/technical]$ find . -iname CHAPTER-1.TXT
+./911report/chapter-1.txt
 ```
-Explaination
+Here we see the command returning the relative path to the file name given as argument to the find command. Note that despite the argument being all upper case, it still returns the lowercase path. This would be very useful for programmers who don't know the naming conventions of the directory they are working in. This would stop any issues from arising due to unexpected capitalization when the user is trying to locate a file by name.
 ```
-code
+[user@sahara ~/docsearch/technical]$ find . -iname chapter-5.txt
+./911report/chapter-5.txt
 ```
-Explaination
+Here we see that despite the fact that the command is not case sensitive, it can still return the expected result when the argument is in lowercase. This would be useful as a default command if a programmer is simply trying to locate a file. While they could use the `-name` command, and should if they know that the file name is lowercase, using the `-iname` command allows them to find the file regardless of capitalization.
 
 ---
 Way 3 - information from ___:
