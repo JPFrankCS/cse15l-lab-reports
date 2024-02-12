@@ -41,7 +41,7 @@ This failure is called a symptom. Now that we know the symptom and the input tha
     }
   }
   ```
-<Explaination of Why this fixes the bug]
+Initially, the code simply replaced the first half of the array with the values in the second half in reverse order, as it should. However, when it got to the second half of the array, it then replaced the second half with the first half. While this would have worked if the array hadn't been modified, it has been, so in the second half of the `for` loop, the second half is being replaced with the first half, which has already been overridden with the second half. This results in an array like `[1,2,3,4]` being reversed into `[4,3,3,4]` instead of `[4,3,2,1]` as it should have. The fix seen in the after works because the value from that first half of the array is stored in a temporary `int` variable before the element is overriden with the corrosponding element from the back half of the array. That `int` can then be put into the second half of the array in its correct spot, fixing the bug. Also note that the `for` loop only iterates through half the array becuase both halves of the array are being worked on in the new code above.
 
 ---
 Now, lets switch gears and discuss some bash commands. Particularly we'll focus on the find command. There are a wide variety of ways to use the find command and a variety of ways to modify the command in the command line. We'll look at 4 ways to use this command: __, __, __, __.
