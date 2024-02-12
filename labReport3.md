@@ -98,7 +98,7 @@ Here we see that despite the fact that the command is not case sensitive, it can
 ./biomed/1476-9433-1-2.txt
 ./biomed/bcr294.txt
 ```
-Here we see the command returns the relative paths of all empty files and directories whithin directory. This could be useful for a data analyst who wants to confirm there are no empty files in a file structure so they can delete or otherwise handle them.
+Here we see the command returns the relative paths of all empty files and directories whithin a directory. This could be useful for a data analyst who wants to confirm there are no empty files in a file structure so they can delete or otherwise handle them.
 ```
 [user@sahara ~/docsearch/technical]$ find ./biomed/ -empty | head
 ./biomed/bcr303.txt
@@ -115,12 +115,40 @@ Here we see the command returns the relative paths of all empty files and direct
 Here we see how the same command can be used to seach a specific directory other than the current working directory and return a list of the relative paths to empty files. This would be very useful if a programmer wanted to do any operation on all empty files, such as putting certain text in them or removing them.
 
 ---
-Way 4 - information from ___:
+`-o`
 ```
-code
+[user@sahara ~/docsearch/technical/911report]$ find . -name "*.txt" -o -name "*.js"
+./chapter-13.3.txt
+./chapter-13.2.txt
+./chapter-6.txt
+./chapter-5.txt
+./chapter-8.txt
+./preface.txt
+./chapter-11.txt
+./chapter-13.4.txt
+./chapter-9.txt
+./chapter-13.1.txt
+./chapter-3.txt
+./chapter-7.txt
+./chapter-13.5.txt
+./chapter-10.txt
+./chapter-2.txt
+./chapter-1.txt
+./chapter-12.txt
+./newJavaScriptFile.js
 ```
-Explaination
+Here we see the `-o` command in effect, searching for files and directories within `911report` that meet the title parameters of either `.txt` or `.js`. This would allow programmers to use 'or' statements in their `find` command, allowing them to string multiple search parameters together. For instance, a programmer may want to find the file paths of all the python and java files in a directory to perform some operation on them.
 ```
-code
+[user@sahara ~/docsearch/technical/biomed]$ find . -name "*.txt" -o -name "*.java" | head
+./1471-2172-3-12.txt
+./1476-9433-1-2.txt
+./1471-2156-3-10.txt
+./1471-2148-1-1.txt
+./ar409.txt
+./1471-2202-2-8.txt
+./1475-4924-1-10.txt
+./1471-2156-2-8.txt
+./1471-2458-2-18.txt
+./1471-2458-2-11.txt
 ```
-Explaination
+While the `|head` command is used here, there are no `.java` files in this directory, so the `-o` command only prints out `.txt` files. This demonstrates how this command can be used even if a programmer doesn't know which files are in their directory. It allows them to get all `.java` files if they exist, but still works even when none do.
