@@ -13,7 +13,12 @@ public void testReverseInPlace() {
 ```
 Despite this, there are still inputs that don't cause a failure such as:
 ```
-assertEquals("hey", 1,5);
+@Test 
+public void testReverseInPlace() {
+    int[] input2 = { 3 };
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{ 3 }, input2);
+}
 ```
 Now lets look at the result of running these tests:
 [image]
