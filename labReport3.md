@@ -84,7 +84,7 @@ Here we see the command returning the relative path to the file name given as ar
 Here we see that despite the fact that the command is not case sensitive, it can still return the expected result when the argument is in lowercase. This would be useful as a default command if a programmer is simply trying to locate a file. While they could use the `-name` command, and should if they know that the file name is lowercase, using the `-iname` command allows them to find the file regardless of capitalization.
 
 ---
-`-empty
+`-empty`
 ```
 [user@sahara ~/docsearch/technical]$ find . -empty | head
 ./biomed/bcr303.txt
