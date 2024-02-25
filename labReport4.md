@@ -14,4 +14,4 @@ Now that we've found the failed tests, we need to fix the bugs leading to those 
 Next, we will run the tests again to confirm that our edits made in `vim` fixed the bug and were saved. `bash test.sh` runs the tests. This command runs the `test.sh` file which runs the unit tests from `ListExamplesTests.java`.
 ![successfulTests](successTests7.png)
 Finally, to finalize these changes we must commit them and push them to our github account.
-![gitCommit](gitCommit7.png
+![gitCommit](gitCommit7.png)
