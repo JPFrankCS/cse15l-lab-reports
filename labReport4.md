@@ -13,5 +13,5 @@ Now that we've found the failed tests, we need to fix the bugs leading to those 
 ![vimEdits](vimEdits7.png)   
 Next, we will run the tests again to confirm that our edits made in `vim` fixed the bug and were saved. `bash test.sh` runs the tests. This command runs the `test.sh` file which runs the unit tests from `ListExamplesTests.java`.
 ![successfulTests](successTests7.png)
-Finally, to finalize these changes we must commit them and push them to our github account.
+Finally, to finalize these changes we must commit them and push them to our github account. We start with `git add .` to add all files in the current directory (represented by `.`) to a set of files ready to be included in the next `git commit` command. We can then run `git commit` which takes the user into a vim editor to type a commit message. We can hit `<c><l>` to enter `insert` mode, type the commit message, and then hit `<esc><:><x>` to enter `normal` mode, and save and exit. We then see the commit message in the image below. 
 ![gitCommit](gitCommit7.png)
