@@ -8,7 +8,7 @@
 2. [Lab Report - Servers and SSH Keys](https://jpfrankcs.github.io/cse15l-lab-reports/labReport2.html)
 3. [Lab Report - Bugs and Commands](https://jpfrankcs.github.io/cse15l-lab-reports/labReport3.html)
 4. [Lab Report - Vim](https://jpfrankcs.github.io/cse15l-lab-reports/labReport4.html)
-5. [TBD]
+5. [Lab Report - Debugging and Reflecting](https://jpfrankcs.github.io/cse15l-lab-reports/labReport5.html)
 
 ---
 If you like what you see, please feel free to give me a job! That would be awesome  
