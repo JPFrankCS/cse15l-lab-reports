@@ -163,7 +163,7 @@ list-examples-grader/
 |--grade.sh
 ```
 Here is the student's post asking for help:
-> HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:[errorMessage](ErrorOutPut9.png). And the command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
+> HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:![errorMessage](ErrorOutPut9.png) The command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
 Here is the TA's response:
 > Hi! I think you're looking in the wrong place. Your `TestListExamples.java` file looks alright. There may be somethign wrong with your `grade.sh` file. Think about where in that file you call your `TestListExamples.java` file!
 
@@ -183,8 +183,8 @@ echo "Finished Compiling"
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples >junit-output.txt
 ```
 This may allow them to see that the bug lies in their `CPATH` variable. The student used `.;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar` instead of `.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar`. The student may have been used to writing code on operating systems that use the semicolon syntax, but in the environement the student is currently in, this notation threw an error. After making this change, the student sees the following output:
-<<Screenshot>>>>>
-
+![good Output](goodOutPut9.png)
+As you can see, fixing this bug fixed the student's program, by altering the valu of the `CPATH` variable as seen above.
 
 ---
 #### Reflecting
