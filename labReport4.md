@@ -16,3 +16,4 @@ Next, we will run the tests again to confirm that our edits made in `vim` fixed 
 Finally, to finalize these changes we must commit them and push them to our github account. We start with `git add .` to add all files in the current directory (represented by `.`) to a set of files ready to be included in the next `git commit` command. We can then run `git commit` which takes the user into a vim editor to type a commit message. We can hit `<c><l>` to enter `insert` mode, type the commit message, and then hit `<esc><:><x>` to enter `normal` mode, and save and exit. We then see the commit message in the image below. 
 ![gitCommit](gitCommit7.png)
 Finally, we must simply push our commit to github by entering the following command: `git push`. The keystrokes needed are simply the letters in the words and the space. See this step in action below:
+![gitPush](gitPush7.png) 
