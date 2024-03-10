@@ -1,15 +1,5 @@
 # Debugging and Reflecting
 #### Debugging
-
-1.The original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is. (Don't actually make the post! Just write the content that would go in such a post)
-2.A response from a TA asking a leading question or suggesting a command to try (To be clear, you are mimicking a TA here.)
-3.Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
-At the end, all the information needed about the setup including:
--The file & directory structure needed
--The contents of each file before fixing the bug
--The full command line (or lines) you ran to trigger the bug
--A description of what to edit to fix the bug
-
 Lets discuss debugging! Lets examine a hypothetical online interaction between a TA and a student as the student asks for help debugging their program. Lets look at an example student of a grading script, meant to grade student submitted code. The student's original code in their `grade.sh` file is below:
 ```
 rm -rf student-submission
@@ -174,14 +164,27 @@ list-examples-grader/
 ```
 Here is the student's post asking for help:
 > HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:<><><><><><<<>>>. And the command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
-
-
 Here is the TA's response:
-> You needa do this!
+> Hi! I think you're looking in the wrong place. Your `TestListExamples.java` file looks alright. There may be somethign wrong with your `grade.sh` file. Think about where in that file you call your `TestListExamples.java` file!
 
-Reading the TA's response, the student may try something like seen below, ____
+Reading the TA's response, the student may examine the lines of code below:
+```
+CPATH='.;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar'
+javac -cp $CPATH *.java 
+
+if [[ $? -ne 0 ]] #if exit code != 0
+then
+    echo "The program failed to compile, see compile error above. Score: 0"
+    exit 1
+fi
+
+echo "Finished Compiling"
+
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples >junit-output.txt
+```
+This may allow them to see that the bug lies in their `CPATH` variable. The student used `.;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar` instead of `.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar`. The student may have been used to writing code on operating systems that use the semicolon syntax, but in the environement the student is currently in, this notation threw an error. After making this change, the student sees the following output:
 <<Screenshot>>>>>
-The student now sees the bug is ___
+
 
 ---
 #### Reflecting
