@@ -155,7 +155,7 @@ public class TestListExamples {
 }
 ```
 While there are many other files in the student's file structure, these two are the only relavant ones in this situation, so for the sake of space and readability I will leave the contents of those other files out.
-Their file structure after running the code looks like this:
+The student's file structure after running the code looks like this:
 ```
 list-examples-grader/
 |--grading-area/
@@ -173,7 +173,9 @@ list-examples-grader/
 |--grade.sh
 ```
 Here is the student's post asking for help:
-> HELPPP
+> HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:<><><><><><<<>>>. And the command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
+
+
 Here is the TA's response:
 > You needa do this!
 
