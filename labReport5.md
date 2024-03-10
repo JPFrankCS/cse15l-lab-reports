@@ -59,6 +59,102 @@ successes=$((tests-failures))
 percent=$((100*successes/tests))
 echo "You Passed $successes / $tests Tests! That is a score of $percent%!"
 ```
+They had the following code in the TestListExamples.java file:
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.Arrays;
+import java.util.List;
+
+class IsMoon implements StringChecker {
+  public boolean checkString(String s) {
+    return s.equalsIgnoreCase("moon");
+  }
+}
+
+public class TestListExamples {
+  @Test(timeout = 500)
+  public void testMergeRightEnd() {
+    List<String> left = Arrays.asList("a", "b", "c");
+    List<String> right = Arrays.asList("a", "d");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testMergeOneEmpty() {
+    List<String> left = Arrays.asList();
+    List<String> right = Arrays.asList("a", "d");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a","d");
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testMergeTwoEmpty() {
+    List<String> left = Arrays.asList();
+    List<String> right = Arrays.asList();
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList();
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testMergeFinishOneEarly() {
+    List<String> left = Arrays.asList("a","b","c");
+    List<String> right = Arrays.asList("d","e","f");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a","b","c","d","e","f");
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testMergeDupes() {
+    List<String> left = Arrays.asList("a","a","c");
+    List<String> right = Arrays.asList("a","d","e");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a","a","a","c","d","e");
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testMergeAlt() {
+    List<String> left = Arrays.asList("a","c","e");
+    List<String> right = Arrays.asList("b","d","f");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a","b","c","d","e","f");
+    assertEquals(expected, merged);
+  }
+  @Test(timeout = 500)
+  public void testFilter0() {
+	List<String> list = Arrays.asList("moon","noon","moon");
+	List<String> filtered = ListExamples.filter(list,new IsMoon());
+	List<String> expected = Arrays.asList("moon","moon");
+	assertEquals(filtered,expected);}
+  @Test(timeout = 500)
+  public void testFilter1() {
+    	  List<String> list = Arrays.asList("moon","noon","moon");
+	  List<String> filtered = ListExamples.filter(list,new IsMoon());
+	  List<String> expected = Arrays.asList("moon","moon");
+	  assertEquals(filtered,expected);
+}
+  @Test(timeout = 500)
+  public void testFilter2() {
+    	  List<String> list = Arrays.asList("goon","noon","mood");
+	  List<String> filtered = ListExamples.filter(list,new IsMoon());
+	  List<String> expected = Arrays.asList();
+	  assertEquals(filtered,expected);
+}
+@Test(timeout = 500)
+  public void testFilte3() {
+    	  List<String> list = Arrays.asList("moon","noon","moon");
+	  List<String> filtered = ListExamples.filter(list,new IsMoon());
+	  List<String> expected = Arrays.asList("moon","moon");
+    	  List<String> list2 = Arrays.asList("moon","noon","moo");
+	  List<String> filtered2 = ListExamples.filter(list2,new IsMoon());
+	  List<String> expected2 = Arrays.asList("moon");
+	  assertEquals(filtered,expected);
+    assertEquals(filtered2,expected2);
+}
+}
+```
+While there are many other files in the student's file structure, these two are the only relavant ones in this situation, so for the sake of space and readability I will leave the contents of those other files out.
 Their file structure after running the code looks like this:
 ```
 list-examples-grader/
