@@ -17,3 +17,4 @@ Finally, to finalize these changes we must commit them and push them to our gith
 ![gitCommit](gitCommit7.png)
 Finally, we must simply push our commit to github by entering the following command: `git push`. The keystrokes needed are simply the letters in the words and the space. See this step in action below:
 ![gitPush](gitPush7.png) 
+This causes the commits from the last step to be pushed to Github.
