@@ -163,7 +163,7 @@ list-examples-grader/
 |--grade.sh
 ```
 Here is the student's post asking for help:
-> HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:<><><><><><<<>>>. And the command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
+> HELPPPP! I've been trying to fix this for HOURS! No matter what input I give to the program, all my tests seem to fail. I don't know if my JUnit is installed incorrectly? Or if there's something wrong with my testing class? Here's an image of the error message:[errorMessage](ErrorOutPut9.png). And the command I used to get it was `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`. I got the link from the week 6 lab writeup and I used the command from the `list-examples-grader/` working directory.
 Here is the TA's response:
 > Hi! I think you're looking in the wrong place. Your `TestListExamples.java` file looks alright. There may be somethign wrong with your `grade.sh` file. Think about where in that file you call your `TestListExamples.java` file!
 
